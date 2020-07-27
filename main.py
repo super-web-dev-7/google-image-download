@@ -1,6 +1,7 @@
 from google_images_download import google_images_download
 from multiprocessing import Process, Queue, current_process
 import queue
+from googletrans import Translator
 
 
 def get_keywords():
@@ -12,15 +13,28 @@ def get_keywords():
         return query
 
 
-def run(query):
-    print(query)
-    response = google_images_download.googleimagesdownload()
-    arguments = {"keywords": query, "limit": 700, "print_urls": True, 'size': 'large', 'prefix': 'large-'}
-    response.download(arguments)
+def get_languages():
+    with open('languages.txt', 'rt') as languages:
+        languages_array = []
+        for language in languages:
+            languages_array.append(language.rstrip())
+        return languages_array
 
-    arguments['size'] = 'medium'
-    arguments['prefix'] = 'medium-'
-    response.download(arguments)
+
+def run(keyword):
+    translator = Translator()
+    languages = get_languages()
+    response = google_images_download.googleimagesdownload()
+    for language in languages:
+        query = translator.translate(keyword, src='en', dest=language).text
+
+        arguments = {"keywords": query, "limit": 700, "print_urls": False, 'image_directory': keyword,
+                     'size': 'large', 'prefix': 'large -', 'no_numbering': True}
+        response.download(arguments)
+
+        arguments['size'] = 'medium'
+        arguments['prefix'] = 'medium -'
+        response.download(arguments)
 
 
 def do_job(tasks_to_accomplish, tasks_that_are_done):
@@ -40,7 +54,7 @@ def do_job(tasks_to_accomplish, tasks_that_are_done):
                 if no exception has been raised, add the task completion 
                 message to task_that_are_done queue
             '''
-            print('Keyword : ' + task)
+            print('Keyword >>>>>>>>>>>>>>>>>>>>>>>>>>>>> : ' + task)
             run(task)
             tasks_that_are_done.put(task + ' is done by ' + current_process().name)
     return True
@@ -49,7 +63,6 @@ def do_job(tasks_to_accomplish, tasks_that_are_done):
 def main():
     query_list = get_keywords()
     number_of_process = 2
-    print(number_of_process)
     tasks_to_accomplish = Queue()
     tasks_that_are_done = Queue()
     processes = []
