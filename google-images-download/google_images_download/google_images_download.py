@@ -1049,10 +1049,7 @@ class googleimagesdownload:
             for sky in suffix_keywords:  # 2.for every suffix keywords
                 i = 0
                 while i < len(search_keyword):  # 3.for every main keyword
-                    iteration = "\n" + "Item no.: " + str(i + 1) + " -->" + " Item name = " + (pky) + (
-                    search_keyword[i]) + (sky)
                     if not arguments["silent_mode"]:
-                        print(iteration.encode('raw_unicode_escape').decode('utf-8'))
                         print("Evaluating...")
                     else:
                         print("Downloading images for: " + (pky) + (search_keyword[i]) + (sky) + " ...")

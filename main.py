@@ -26,6 +26,7 @@ def run(keyword):
     languages = get_languages()
     response = google_images_download.googleimagesdownload()
     for language in languages:
+        print(keyword + ' >>>>>>>>>    language >>>>>>>>>>>>>>>>>>>>>>>>> ' + language)
         query = translator.translate(keyword, src='en', dest=language).text
 
         arguments = {"keywords": query, "limit": 700, "print_urls": False, 'image_directory': keyword,
