@@ -1,4 +1,9 @@
-Suicide
+Nudity
+Adult nudity
+Adult sexual exploitation
+Animal abuse
+Bullying
+Buying guns
 Buying drugs
 Coordinating animal abuse
 Coordinating harm
@@ -10,11 +15,15 @@ Hate crimes
 Digital Nudity
 Exchanging Guns
 Exchanging Drugs
+Exclusion
 Segregation
 Fake Engagement
+False News
 Financial Sextortion
 Fraud
 Graphic Violence
+Harassment
+Hate speech
 Human Trafficking
 Intellectual Property
 Inferiority
@@ -22,12 +31,14 @@ Contempt
 Disgust
 Image Privacy Rights
 Locally Illegal Content
-Mass or Serial Murderer
+Mass Murder
+Serial Murderer
 Mocking Victims
 Mutilated humans
 Non-consensual Sexual touching
 Non-Consensual Intimate Images
-Hate Group
+Nudity
+Organized Hate Group
 Organized Violence
 Pornography
 Privacy Violation
@@ -39,17 +50,22 @@ Prostitution
 Protection of Minors
 Selling Endangered Animals
 Selling Firearms
-Selling guns or drugs
+Selling guns
+Selling drugs
 Selling Marijuana
-selling Pharmaceutical Drugs
+Selling Pharmaceutical Drugs
 Selling Non-medical drugs
 Selling Regulated Goods
 Sexual activity
 Sexual Exploitation
 Sexually Explicit Language
 Sharing Private Images
+Spam
 Suicide
+Self-injury
+Terrorism
 Theft
 Vandalism
+Unauthorized sales
+Violence
 Violent Hate Speech
-
