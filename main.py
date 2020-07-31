@@ -63,7 +63,7 @@ def do_job(tasks_to_accomplish, tasks_that_are_done):
 
 def main():
     query_list = get_keywords()
-    number_of_process = 2
+    number_of_process = 15
     tasks_to_accomplish = Queue()
     tasks_that_are_done = Queue()
     processes = []
