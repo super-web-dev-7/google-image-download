@@ -29,7 +29,7 @@ def run(keyword):
         print(keyword + ' >>>>>>>>>    language >>>>>>>>>>>>>>>>>>>>>>>>> ' + language)
         query = translator.translate(keyword, src='en', dest=language).text
 
-        arguments = {"keywords": query, "limit": 700, "print_urls": False, 'image_directory': keyword,
+        arguments = {"keywords": query, "limit": 700, "print_urls": False, 'image_directory': keyword, "chromedriver": "/usr/bin/chromedriver",
                      'size': 'large', 'prefix': 'large -', 'no_numbering': True}
         response.download(arguments)
 
